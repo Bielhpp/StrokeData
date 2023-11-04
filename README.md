@@ -1,5 +1,3 @@
-# StrokeData
- Projeto de estudo para analisar 
 # StrokeData - Projeto de Estudo utilizando Google Colab
 
 Objetivos de Ensino
