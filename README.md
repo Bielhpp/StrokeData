@@ -1,28 +1,27 @@
-# StrokeData - Projeto de Estudo utilizando Google Colab
+# StrokeData - Study Project using Google Colab
 
-Objetivos de Ensino
-Exercitar os seguintes conceitos das ferramentas:
-✓ Exercitar o módulo Spark MLLib do Apache Spark.
+**Educational Objectives**
+Exercise the following concepts of tools:
+✓ Exercise the Spark MLLib module of Apache Spark.
 
-Enunciado
-Doenças ligadas ao coração afetam milhões de pessoas ao redor do mundo e, segundo a Organização Mundial da Saúde (OMS), são a segunda principal causa de morte da população mundial. Como cientista de dados, você foi contratado para criar um modelo preditivo que, a partir de dados de pacientes como idade, gênero, nível de glicose, se o paciente fuma ou não, vai prever se aquele paciente terá um derrame cerebral ou não.
-O arquivo stroke_data.csv possui atributos de pacientes e um atributo “stroke” (derrame), que indica se aquele paciente sofreu um evento de derrame ou não.
+**Description**
+Heart-related diseases affect millions of people worldwide and, according to the World Health Organization (WHO), they are the second leading cause of death in the global population. As a data scientist, you have been hired to create a predictive model that, based on patient data such as age, gender, glucose level, smoking status, predicts whether that patient will have a stroke or not. The file `stroke_data.csv` contains patient attributes and a "stroke" attribute, indicating whether that patient suffered a stroke event or not.
 
-O exercício serve para responder as seguintes perguntas:
+This exercise aims to answer the following questions:
 
-1- Quantos registros existem no arquivo?
-2- Quantas colunas existem no arquivo? Quantas são numéricas? Ao ler o arquivo com spark.read.csv, habilite inferSchema=True. Use a função printSchema() da API de Dataframes.
-3- No conjunto de dados, quantos pacientes sofreram e não sofreram derrame (stroke), respectivamente?
-4- A partir do dataframe, crie uma tabela temporária usando df.createOrReplaceTempView('table') e a seguir use spark.sql para escrever uma consulta SQL que obtenha quantos pacientes tiveram derrame por tipo de trabalho (work_type). Quantos pacientes sofreram derrame e trabalhavam respectivamente, no setor privado, de forma independente, no governo e quantas são crianças?
-5- Escreva uma consulta com spark.sql para determinar a proporção, por gênero, de participantes do estudo. A maioria dos participantes é:
-6- Escreva uma consulta com spark.sql para determinar quem tem mais probabilidade de sofrer derrame: hipertensos ou não-hipertensos. Você pode escrever uma consulta para cada grupo. A partir das probabilidades que você obteve, você conclui que:
-7- Escreva uma consulta com spark.sql que determine o número de pessoas que sofreram derrame por idade. Com qual idade o maior número de pessoas do conjunto de dados sofreu derrame?
-8- Usando a API de dataframes, determine quantas pessoas sofreram derrames após os 50 anos.
-9- Usando spark.sql, determine qual o nível médio de glicose para pessoas que, respectivamente, sofreram e não sofreram derrame.
-10- Qual é o BMI (IMC = índice de massa corpórea) médio de quem sofreu e não sofreu derrame?
-11- Crie um modelo de árvore de decisão que prevê a chance de derrame (stroke) a partir das variáveis contínuas/categóricas: idade, BMI, hipertensão, doença do coração, nível médio de glicose. Use o conteúdo da segunda aula interativa para criar e avaliar o modelo.
-Qual a acurácia de um modelo construído?
-12- Adicione ao modelo as variáveis categóricas: gênero e status de fumante. Use o conteúdo da aula interativa para lidar com as variáveis categóricas.  A acurácia (qualidade) do modelo aumentou para:
-13- Adicione ao modelo as variáveis categóricas: gênero e status de fumante. Use o conteúdo da aula interativa para lidar com as variáveis categóricas. Qual dessas variáveis é mais importante no modelo de árvore de decisão que você construiu?
-14- Adicione ao modelo as variáveis categóricas: gênero e status de fumante. Use o conteúdo da aula interativa para lidar com as variáveis categóricas. Qual a profundidade da árvore de decisão? 
-15- Quantos nodos a árvore de decisão possui?
+## 1. How many records are there in the file?
+## 2. How many columns are there in the file? How many are numeric? When reading the file with `spark.read.csv`, enable `inferSchema=True`. Use the `printSchema()` function of the DataFrame API.
+## 3. In the dataset, how many patients suffered a stroke, and how many did not?
+## 4. From the dataframe, create a temporary table using `df.createOrReplaceTempView('table')` and then use `spark.sql` to write a SQL query that retrieves the number of patients who had a stroke by work type. How many patients suffered a stroke and worked, respectively, in the private sector, independently, in the government, and how many are children?
+## 5. Write a `spark.sql` query to determine the proportion, by gender, of study participants. Most participants are:
+## 6. Write a `spark.sql` query to determine who is more likely to have a stroke: hypertensive or non-hypertensive. You can write a query for each group. From the probabilities you obtained, do you conclude that:
+## 7. Write a `spark.sql` query that determines the number of people who suffered a stroke by age. At what age did the largest number of people in the dataset suffer a stroke?
+## 8. Using the DataFrame API, determine how many people suffered strokes after the age of 50.
+## 9. Using `spark.sql`, determine the average glucose level for people who respectively suffered and did not suffer a stroke.
+## 10. What is the average BMI (Body Mass Index) of those who suffered and did not suffer a stroke?
+## 11. Create a decision tree model that predicts the chance of stroke using the continuous/categorical variables: age, BMI, hypertension, heart disease, average glucose level. Use the content from the second interactive lesson to create and evaluate the model.
+## What is the accuracy of a built model?
+## 12. Add to the model the categorical variables: gender and smoking status. Use the content from the interactive lesson to deal with categorical variables. Did the accuracy (quality) of the model increase to:
+## 13. Add to the model the categorical variables: gender and smoking status. Use the content from the interactive lesson to deal with categorical variables. Which of these variables is more important in the decision tree model you built?
+## 14. Add to the model the categorical variables: gender and smoking status. Use the content from the interactive lesson to deal with categorical variables. What is the depth of the decision tree?
+## 15. How many nodes does the decision tree have?
